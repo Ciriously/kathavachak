@@ -12,10 +12,10 @@ const Hero = () => {
                             Experience the Power
                             of Audiobooks in Your  Language
                         </h1>
-                        <p className="max-w-xl mb-8 font-light font-poppins text-[#2E3E5C] lg:mb-14 md:text-lg lg:text-xl">
+                        <p className="max-w-xl mb-8 font-light font-poppins  text-[#2E3E5C] lg:mb-14 md:text-lg lg:text-xl">
                             At Kathavachak, we believe in the power of accessibility. Our mission is to break down language barriers and make knowledge accessible to all, regardless of linguistic background or visual ability.
                         </p>
-                        <div className="space-y-2 sm:flex sm:space-y-0 font-poppins sm:space-x-8">
+                        <div className="space-y-4 sm:flex sm:space-y-0 font-poppins sm:space-x-8">
                             <button
                                 className="inline-flex items-center justify-center w-40 px-5 py-1 text-xl font-poppins font-medium text-center text-white bg-[#5E41B3] border border-transparent rounded-md hover:bg-purple-700 focus:ring-4 focus:ring-purple-500"
                             >
