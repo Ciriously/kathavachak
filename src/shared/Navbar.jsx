@@ -29,7 +29,7 @@ const Navbar = () => {
                 alt="logo"
               />
             </Link>
-            <span className="text-3xl font-poppins font-medium text-[#170F49]">kathaVachak</span>
+            <span className="text-3xl font-poppins font-bold text-[#170F49]">kathaVachak</span>
           </div>
           <div className="flex-grow" />
           <div className="hidden md:flex items-center justify-center gap-6">
@@ -45,18 +45,18 @@ const Navbar = () => {
             </button>
           </div>
           <div className="relative flex items-center justify-center md:hidden">
-            <button type="button" onClick={toggleDropdown} className="group h-14 w-14 rounded-lg border-2 border-black flex justify-center items-center text-sm font-semibold transition-all transform duration-300 hover:border-gray-300" aria-expanded={isDropdownOpen ? 'true' : 'false'}>
+            <button type="button" onClick={toggleDropdown} className="group h-8 w-4 rounded-lg  flex justify-center items-center text-sm font-semibold transition-all transform duration-300 hover:border-gray-300" aria-expanded={isDropdownOpen ? 'true' : 'false'}>
               <div className="grid justify-items-center gap-1.5">
-                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
-                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? 'scale-x-0' : ''}`}></span>
-                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+                <span className={`h-0.5 w-4 rounded-full bg-black transition transform ${isDropdownOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                <span className={`h-0.5 w-4 rounded-full bg-black transition transform ${isDropdownOpen ? 'scale-x-0' : ''}`}></span>
+                <span className={`h-0.5 w-4 rounded-full bg-black transition transform ${isDropdownOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
               </div>
             </button>
           </div>
         </nav>
         {/* Mobile dropdown menu */}
         {isDropdownOpen && (
-          <div className="md:hidden mb-4 flex flex-col items-center gap-4 bg-white border-t border-slate-100">
+          <div className="md:hidden mb-4 flex font-poppins text-xl flex-col items-center gap-4 bg-white border-t border-slate-100">
             <a href="#" className="pt-1.5 text-md font-medium text-slate-700">Home</a>
             <a href="#" className="pt-1.5 text-md font-medium text-slate-700">How it Works</a>
             <a href="#" className="pt-1.5 text-md font-medium text-slate-700">Contact Us</a>
