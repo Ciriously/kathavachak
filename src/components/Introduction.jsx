@@ -3,7 +3,7 @@ import backgroundImage from '../assets/KATHAVACHAK KATH.svg';
 
 const Introduction = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-screen" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center bottom' }}>
+        <div className="flex flex-col items-center justify-center " style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center bottom' }}>
             <div className="container mx-auto px-4 flex flex-col items-center justify-center h-full text-center">
                 <h1 className="text-4xl font-bold font-poppins text-black mb-14">Introducing KathaVachak</h1>
                 <div className="max-w-6xl text-lg font-poppins text-[#2E3E5C]"> {/* Adjusted max-w-lg */}

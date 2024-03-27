@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/logo.svg';
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div>
-      <header className="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg">
-        <nav className="mx-auto flex max-w-[100rem] gap-10 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4 items-center">
-
-          <ul className="hidden items-center font-poppins justify-center gap-8 md:flex">
-            <li className="pt-1.5  text-md font-medium text-slate-700">
-              <a href="#">Home</a>
-            </li>
-            <li className="pt-1.5  text-md font-medium text-slate-700">
-              <a href="#">How it Works</a>
-            </li>
-            <li className="pt-1.5  text-md font-medium text-slate-700">
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-          <div className="flex-grow items-center" />
+      <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg">
+        <nav className="mx-auto flex max-w-[100rem] px-6 lg:px-12 py-4 items-center">
           <div className="flex items-center">
+            <div className="hidden md:flex font-poppins items-center gap-16 ml-20 mr-40">
+              <span className="text-md font-medium text-slate-700">Home</span>
+              <span className="text-md font-medium text-slate-700">How it Works</span>
+              <span className="text-md font-medium text-slate-700">Contact Us</span>
+            </div>
             <Link to="home" smooth={true} duration={500} className="mr-4">
               <img
                 src={logo}
@@ -31,40 +29,39 @@ const Navbar = () => {
                 alt="logo"
               />
             </Link>
-            <span className=" text-3xl mr-[20rem] font-poppins  font-medium text-[#170F49]">kathaVachak</span>
+            <span className="text-3xl font-poppins font-medium text-[#170F49]">kathaVachak</span>
           </div>
-          <div className="hidden items-center justify-center gap-6 md:flex">
+          <div className="flex-grow" />
+          <div className="hidden md:flex items-center justify-center gap-6">
             <button
-              className="inline-flex items-center font-poppins justify-center w-4 px-5 py-3 text-md font-medium text-center text-white bg-[#5E41B3] border border-transparent rounded-3xl sm:w-28 hover:bg-purple-700 focus:ring-4 focus:ring-purple-500"
+              className="inline-flex items-center justify-center w-28 px-5 py-3 text-md font-medium text-center text-white bg-[#5E41B3] border border-transparent rounded-3xl hover:bg-purple-700 focus:ring-4 focus:ring-purple-500"
             >
               Try Me
             </button>
             <button
-              className="inline-flex items-center font-poppins justify-center w-4 px-5 py-3 text-md font-medium text-center text-white bg-[#5E41B3] border border-transparent rounded-3xl sm:w-44 hover:bg-purple-700 focus:ring-4 focus:ring-purple-500"
+              className="inline-flex items-center justify-center w-44 px-5 py-3 text-md font-medium text-center text-white bg-[#5E41B3] border border-transparent rounded-3xl hover:bg-purple-700 focus:ring-4 focus:ring-purple-500"
             >
               Download Now
             </button>
           </div>
           <div className="relative flex items-center justify-center md:hidden">
-            <button type="button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                className="h-6 w-auto text-slate-900"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+            <button type="button" onClick={toggleDropdown} className="group h-14 w-14 rounded-lg border-2 border-black flex justify-center items-center text-sm font-semibold transition-all transform duration-300 hover:border-gray-300" aria-expanded={isDropdownOpen ? 'true' : 'false'}>
+              <div className="grid justify-items-center gap-1.5">
+                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? 'scale-x-0' : ''}`}></span>
+                <span className={`h-1 w-6 rounded-full bg-black transition transform ${isDropdownOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+              </div>
             </button>
           </div>
         </nav>
+        {/* Mobile dropdown menu */}
+        {isDropdownOpen && (
+          <div className="md:hidden mb-4 flex flex-col items-center gap-4 bg-white border-t border-slate-100">
+            <a href="#" className="pt-1.5 text-md font-medium text-slate-700">Home</a>
+            <a href="#" className="pt-1.5 text-md font-medium text-slate-700">How it Works</a>
+            <a href="#" className="pt-1.5 text-md font-medium text-slate-700">Contact Us</a>
+          </div>
+        )}
       </header>
     </div>
   );
