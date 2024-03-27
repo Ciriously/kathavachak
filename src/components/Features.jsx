@@ -8,7 +8,7 @@ import scan from '../assets/cards/scan.svg';
 const Card = ({ title, subtitle, image }) => {
     return (
         <div className="transform rounded-xl h-44 w-full sm:w-44 sm:h-[18rem] py-4 px-4 sm:w-[20rem] bg-[#865DFF] font-poppins shadow-xl transition duration-300 hover:scale-105">
-            <div className="flex flex-col h-full justify-center items-center">
+            <div className="flex flex-col  md:text-xl sm:text-sm h-full justify-center items-center">
                 <h2 className="font-bold mb-4 text-white text-center">{title}</h2>
                 <p className="text-white text-center">{subtitle}</p>
                 <img src={image} alt={title} className="mt-auto w-12 h-12 sm:w-20 sm:h-20" />
@@ -33,7 +33,7 @@ const Features = () => {
         <div className="py-4 px-2 sm:px-8 lg:px-16 xl:px-24">
             <h1 className="text-4xl text-[#170F49] text-center mb-8 font-poppins font-bold">Featured Highlights</h1>
             <div className="flex flex-wrap justify-center">
-                <div className="flex flex-wrap justify-center text-xl w-full lg:gap-16">
+                <div className="flex flex-wrap justify-center w-full lg:gap-16">
                     {data1.map((card, index) => (
                         <div key={index} className="w-full sm:w-1/3 lg:w-1/4 px-4  py-4">
                             <Card
@@ -46,7 +46,7 @@ const Features = () => {
                 </div>
             </div>
             <div className="flex flex-wrap justify-center mt-4">
-                <div className="flex flex-wrap gap-4 justify-center text-xl w-full lg:gap-16">
+                <div className="flex flex-wrap gap-4 justify-center w-full lg:gap-16">
                     {data2.map((card, index) => (
                         <div key={index} className="w-full sm:w-1/2 lg:w-1/4 p-2">
                             <Card
