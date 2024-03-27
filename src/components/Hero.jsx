@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <div>
             <section className="bg-white px-6 lg:px-0">
-                <div className="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-36 lg:py-16 lg:grid-cols-12 lg:pt-28">
+                <div className="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-40 lg:py-16 lg:grid-cols-12 lg:pt-28">
                     <div className="lg:col-span-5 lg:pr-8">
                         <h1 className="text-4xl lg:text-6xl font-bold font-poppins leading-snug mb-8 lg:max-w-[45rem]">
                             Experience the Power

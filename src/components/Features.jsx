@@ -33,7 +33,7 @@ const Features = () => {
         <div className="py-4 px-2 sm:px-8 lg:px-16 xl:px-24">
             <h1 className="text-4xl text-[#170F49] text-center mb-8 font-poppins font-bold">Featured Highlights</h1>
             <div className="flex flex-wrap justify-center">
-                <div className="flex flex-wrap justify-center w-full">
+                <div className="flex flex-wrap justify-center text-xl w-full lg:gap-16">
                     {data1.map((card, index) => (
                         <div key={index} className="w-full sm:w-1/3 lg:w-1/4 px-4  py-4">
                             <Card
@@ -46,7 +46,7 @@ const Features = () => {
                 </div>
             </div>
             <div className="flex flex-wrap justify-center mt-4">
-                <div className="flex flex-wrap gap-4 justify-center w-full">
+                <div className="flex flex-wrap gap-4 justify-center text-xl w-full lg:gap-16">
                     {data2.map((card, index) => (
                         <div key={index} className="w-full sm:w-1/2 lg:w-1/4 p-2">
                             <Card
